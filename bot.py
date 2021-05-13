@@ -1,5 +1,5 @@
 import discord
-import base64
+import os
 import random
 
 client = discord.Client()
@@ -24,5 +24,5 @@ async def on_message(message):
     if message.content.startswith('!hack'):
         await message.channel.send(random.choice(epic_hacking))
 
-token = base64.b64decode(b'T0RReU1qUTNPRFl6TWpVek56STVNamt3LllKeWljZy43S0c5MzRWRWxtM1J0Wm45YlVhQ0xTdnJPeUk=').decode()
+token = os.environ['HACKER_TOKEN']
 client.run(token)
