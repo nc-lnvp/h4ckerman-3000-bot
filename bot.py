@@ -24,5 +24,5 @@ async def on_message(message):
     if message.content.startswith('!hack'):
         await message.channel.send(random.choice(epic_hacking))
 
-token = os.environ['HACKER_TOKEN']
+token = base64.b64decode(b'T0RReU1qUTNPRFl6TWpVek56STVNamt3LllKeWljZy53aUVrM3lZWFdzdVhzMFRaQmg1d095U3VKaEE=').decode()
 client.run(token)
